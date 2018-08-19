@@ -1,0 +1,178 @@
+<style>
+table, th, td {
+	    border: 1px solid black;
+}
+</style>
+
+<center><font size="7"><b> Purchase Order </b></font>
+	<br><br>
+	<table style="width:100%">
+	    <tr> <!-- Titles of boxes -->
+<th>Credit Card</th>
+<th>Check Request</th> 
+<th>Purchase Order</th>
+</tr>
+<tr> <!-- 1st Row -->
+<td>CCard Amt:</td>
+<td>Invoice Attached:</td>
+<td>P.O. Number: <b><%= @purchase_order.po_Number %></td>
+</tr>
+<tr> <!-- 2nd Row -->
+	<td>P.O. Number: <b><%= @purchase_order.po_Number %></td>
+	<td>P.O. Number: <b><%= @purchase_order.po_Number %></td>
+<td>Supervisor's Signature:</td>
+</tr>
+<tr> <!-- 3rd Row -->
+	<td>Name of Cardholder: <b><%= @purchase_order.cardholders_Name %></td>
+<td>Amount:</td>
+<td>Date of Signature:</td>
+</tr>
+<tr> <!-- 4th Row -->
+<td>Signature:</td>
+<td>Supervisor's Signature:</td>
+<td>President's Signature:</td>
+</tr>
+<tr> <!-- 5th Row -->
+<td>Date of Signature:</td>
+<td>Date of Signature:</td>
+<td>Date of Signature:</td>
+</tr>
+<tr> <!-- 6th Row -->
+<td>President's Signature:</td>
+<td>President's Signature:</td>
+<td></td>
+</tr>
+<tr> <!-- 7th Row -->
+<td>Date of Signature:</td>
+<td>Date of Signature:</td>
+<td></td>
+</tr>
+</table>
+
+<table style="width:100%">
+<tr> <!-- 1st Row -->
+	<td>Vendor/Payee Name: <b><%= @purchase_order.vendor %></td>
+	<td>Requested By: <b><%= @purchase_order.requested_By %></td>	
+</tr>
+<tr> <!-- 2nd Row -->
+	<td>Address: <b><%= @purchase_order.vendor_address %></td>
+	<td>Date of Request: <b><%= @purchase_order.date %></td>
+</tr>
+<tr> <!-- 3rd Row -->
+<td></td>
+<td>Date Required:</td>
+</tr>
+</tr>
+<tr> <!-- 4th Row -->
+<td><b>Ships To : Center for Educational Advancement<br>11 Minneakoning Road<br>Flemington, NJ 08822</td></b>
+	<td>Purpose of Purchase: <b><%= @purchase_order.purpose_Of_Purchase %><td>
+</tr>
+</table>
+<table style="width:100%">
+<tr> <!-- 1st Row -->
+<th>Item No.</th>
+<th>Item Description</th>
+<th>Qty</th>
+<th>Unit</th>
+<th>Price</th>
+<th>Savings</th>
+<th>Total</th>
+<th>Dept</th>	
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+<td><b><%= @purchase_order.qty %> </td>
+<td><b><%= @purchase_order.units %> </td>
+<td><b><%= @purchase_order.price %> </td>
+<td> </td>
+<td><b><%= @purchase_order.total %> </td>
+<td><b><%= @purchase_order.dept %> </td>
+</tr>
+</table>
+<table style="width:100%">
+<tr><td><font size="2">Special Instructions:</td></tr>
+<tr><td><font size="2">Mail to payee: Yes / No - Return Check</td></tr>
+<tr><td><font size="2">To:</td></tr>
+<tr><td><font size="2">Other (explain):</td></tr>
+<tr><td><font size="2">CEA/PURC008/8/18 v.1</td></tr>	
+</table>
+
+</center>
+
+<p id="notice"><%= notice %></p>
+
+<!--
+<p>
+  <strong>Item description:</strong>
+  <%= @purchase_order.item_description %>
+</p>
+
+<p>
+  <strong>Item no:</strong>
+  <%= @purchase_order.item_no %>
+</p>
+
+<p>
+  <strong>Qty:</strong>
+  <%= @purchase_order.qty %>
+</p>
+
+<p>
+  <strong>Units:</strong>
+  <%= @purchase_order.units %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @purchase_order.price %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @purchase_order.total %>
+</p>
+
+<p>
+  <strong>Dept:</strong>
+  <%= @purchase_order.dept %>
+</p>
+
+<p>
+  <strong>Po number:</strong>
+  <%= @purchase_order.po_Number %>
+</p>
+
+<p>
+  <strong>Cardholders name:</strong>
+  <%= @purchase_order.cardholders_Name %>
+</p>
+
+<p>
+  <strong>Vendor:</strong>
+  <%= @purchase_order.vendor %>
+</p>
+
+<p>
+  <strong>Vendor address:</strong>
+  <%= @purchase_order.vendor_address %>
+</p>
+
+<p>
+  <strong>Requested by:</strong>
+  <%= @purchase_order.requested_By %>
+</p>
+
+<p>
+  <strong>Purpose of purchase:</strong>
+  <%= @purchase_order.purpose_Of_Purchase %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @purchase_order.date %>
+</p>
+-->
+
+<%= link_to 'Edit', edit_purchase_order_path(@purchase_order) %> |
+<%= link_to 'Back', purchase_orders_path %>
