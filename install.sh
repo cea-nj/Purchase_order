@@ -1,6 +1,7 @@
 #!/bin/bash
 
-curl -L https://get.rvm.io | bash -s stable --rails
+command curl -sSL https://rvm.io/mpapis.asc | gpg --import -
+\curl -L https://get.rvm.io | bash -s stable --rails
 gem install pg
 su - postgres
 create role myapp with createdb login password 'password1';
